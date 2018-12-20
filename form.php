@@ -1,5 +1,5 @@
 <?php
-file_put_contents('data/'.$_GET['title'],$_GET['textarea']);
-echo  $_GET['title'];
-echo $_GET['textarea'];
+file_put_contents('data/'.$_POST['title'],$_POST['textarea']);
+echo  $_POST['title'];
+echo $_POST['textarea'];
  ?>

@@ -2,7 +2,12 @@
 <html>
  <head>
    <meta charset="utf-8">
-   <title></title>
+   <title>
+     <?php
+     include 'include.php';
+      print_title();
+     ?>
+   </title>
  </head>
  <body>
    <h1><a href="index.php">WEB</a></h1>
@@ -18,30 +23,15 @@
     파일의 목록의 각 개체 마다 li 와 a 태그를 이용하여 목록을 추가한다
     -->
     <?php
-    $list = scandir('data');
-    $i = 0;
-    while($i <count($list)){
-      if($list[$i] !='.' && $list[$i] != '..'){
-          echo '<li><a href = "index.php?id='.$list[$i].'">'.$list[$i].'</a></li>';
-        }
-      $i++;
-    }
+    print_list();
     ?>
    <h2>
    <?php
-     if(isset($_GET['id'])){
-       echo $_GET['id'];
-     } else {
-       echo "Welcome";
-     }
+   print_title();
    ?>
    </h2>
    <?php
-     if(isset($_GET['id'])){
-       echo file_get_contents("data/".$_GET['id']);
-     } else {
-       echo "Hello, PHP";
-     }
+    print_content();
    ?>
  </body>
 </html>

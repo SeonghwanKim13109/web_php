@@ -4,7 +4,7 @@ function print_list(){
   $i = 0;
   while($i <count($list)){
     if($list[$i] !='.' && $list[$i] != '..'){
-        echo '<li><a href = "index.php?id='.$list[$i].'">'.$list[$i].'</a></li>';
+        echo '<li><a href = "index.php?id='.$list[$i].'">'.($i-1).'. '.$list[$i].'</a></li>';
       }
       $i++;
     }

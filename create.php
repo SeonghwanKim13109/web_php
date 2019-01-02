@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
+   <link rel="stylesheet" href="link.css">
    <meta charset="utf-8">
    <title>
      <?php

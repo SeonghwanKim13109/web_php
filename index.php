@@ -1,48 +1,6 @@
-<!DOCTYPE html>
-<html>
- <head>
-   <link rel="stylesheet" href="link.css">
-   <meta charset="utf-8">
-   <title>
-     <?php
-     include 'include.php';
-      print_title();
-     ?>
-   </title>
- </head>
- <body>
-   <h1><a href="index.php">WEB</a></h1>
-   <!-- list는 목차가 추가될 때마다 수동으로 바껴야 하는 부분 -->
-   <!-- <ol>
-     <li><a href="index.php?id=HTML">HTML</a></li>
-     <li><a href="index.php?id=CSS">CSS</a></li>
-     <li><a href="index.php?id=JavaScript">JavaScript</a></li>
-     <li><a href="index.php?id=PHP">PHP</a></li>
-   </ol> -->
-   <!--
-    data 디렉토리에 있는 파일의 목록을 가져온다
-    파일의 목록의 각 개체 마다 li 와 a 태그를 이용하여 목록을 추가한다
-    -->
-    <?php
-    print_list();
-    ?>
-    <a class="button" href="create.php">create</a>
-    <?php if(isset($_GET['id'])) {?>
-      <a class="button" href="update.php?id=<?=$_GET['id']?>">update</a>
-      <a class="button" href="confirm.php?id=<?=$_GET['id']?>">delete</a>
-      <!--
-      <a href="update.php?id=<?php echo $_GET['id']?>">update</a>
-      와 동일한 문장이다
-      -->
-    <?php } ?>
-
-   <h2>
-   <?php
-   print_title();
+<?php
+  require('view/up.php');
+  require('view/buttons.php');
+  require('view/reference.php');
+  require('view/bottom.php');
    ?>
-   </h2>
-   <?php
-    print_content();
-   ?>
- </body>
-</html>
